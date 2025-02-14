@@ -30,10 +30,34 @@ export function Welcome() {
       <p>
         Navigate: <Link to={"/about"}> About Page </Link>
       </p>
-      <CustomButton message={"Navigate to About"} navigateTo={"/about"} />
-      <CustomButton message={"Navigate to /"} navigateTo={"/"} />
-      <CustomButton message={"Navigate to Home"} navigateTo={"/home"} />
-      <CustomButton message={"Navigate to Contact"} navigateTo={"/contact"} />
+      <CustomButton
+        message={"Navigate to About"}
+        navigateTo={"/about"}
+        customOnClickFunction={() => {
+          console.log("Navigating to About...")
+        }}
+      />
+      <CustomButton
+        message={"Navigate to /"}
+        navigateTo={"/"}
+        customOnClickFunction={() => {
+          console.log("Navigating to /...")
+        }}
+      />
+      <CustomButton
+        message={"Navigate to Home"}
+        navigateTo={"/home"}
+        customOnClickFunction={() => {
+          console.log("Navigating to Home...")
+        }}
+      />
+      <CustomButton
+        message={"Navigate to Contact"}
+        navigateTo={"/contact"}
+        customOnClickFunction={() => {
+          console.log("Navigating to Contact...")
+        }}
+      />
     </div>
   )
 }
