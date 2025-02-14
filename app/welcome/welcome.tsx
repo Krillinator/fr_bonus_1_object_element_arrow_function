@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router"
+import { CustomButton } from "~/components/CustomButton"
 import type { User } from "~/types/User"
 
 export function Welcome() {
@@ -29,6 +30,10 @@ export function Welcome() {
       <p>
         Navigate: <Link to={"/about"}> About Page </Link>
       </p>
+      <CustomButton message={"Navigate to About"} navigateTo={"/about"} />
+      <CustomButton message={"Navigate to /"} navigateTo={"/"} />
+      <CustomButton message={"Navigate to Home"} navigateTo={"/home"} />
+      <CustomButton message={"Navigate to Contact"} navigateTo={"/contact"} />
     </div>
   )
 }
