@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router"
 import type { User } from "~/types/User"
 
 export function Welcome() {
@@ -24,6 +25,10 @@ export function Welcome() {
       >
         Add to Count +1
       </button>
+      {/* Navigation Example */}
+      <p>
+        Navigate: <Link to={"/about"}> About Page </Link>
+      </p>
     </div>
   )
 }
